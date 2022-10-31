@@ -9,12 +9,13 @@ import ContentHabilidadesDev from '../../ContentHabilidades/ContentHabilidadesDe
 const ProfileDataHabilidadesDev: React.FC = () => {
   return (
     <ContentHabilidadesDev
+    typescript="Typescript"
     front1="React Js"
     front2="Vue"
     linguagemBackend1="Node.js"
     linguagemBackend2="Java"
     linguagemBackend3="Python"
-    servicos={["Git", "Styled-components", "noSQL", "MongoDB" ]}
+    servicos={["Git", "Styled-components", "mySQL", "MongoDB" ]}
     />     
   );
 }

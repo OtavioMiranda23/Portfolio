@@ -5,6 +5,7 @@ import { ButtonsBio, Container } from './styles';
 
 
 interface IContentBio {
+  map: any;
   saudacao: string;
   nomeDev: string;
   especialidade: string;
@@ -17,6 +18,7 @@ const ContentBio: React.FC <IContentBio> = (Props) => {
 
 
   return (
+
   <Container>
       <h1>{Props.saudacao}! Meu nome é {Props.nomeDev}, sou desenvolvedor {Props.especialidade}</h1>
       <LerMais limiteCaracteresBio={limiteCaracteresBio}>
