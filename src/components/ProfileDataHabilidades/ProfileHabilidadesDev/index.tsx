@@ -1,5 +1,5 @@
 import React from "react";
-import { SiJava, SiTypescript, SiVuedotjs } from "react-icons/si";
+import { SiGithub, SiJava, SiMongodb, SiMysql, SiNodedotjs, SiPython, SiReact, SiStyledcomponents, SiTypescript, SiVuedotjs } from "react-icons/si";
 import ContentHabilidadesDev, {
   IHabilidade,
 } from "../../ContentHabilidades/ContentHabilidadesDev";
@@ -8,19 +8,60 @@ import ContentHabilidadesDev, {
 const habilidades: IHabilidade[] = [
   {
     nome: "Typescript",
-    nivelProficiencia: 5,
+    nivelProficiencia: 3,
     icon: () => <SiTypescript />,
   },
   {
-    nome: "Java",
-    nivelProficiencia: 5,
-    icon: () => <SiJava />,
+    nome: "ReactJs",
+    nivelProficiencia: 3,
+    icon: () => <SiReact />
   },
   {
     nome: "Vue",
-    nivelProficiencia: 10,
+    nivelProficiencia: 1,
     icon: () => <SiVuedotjs />,
   },
+  {
+    nome: "Node.js",
+    nivelProficiencia: 3,
+    icon: () => <SiNodedotjs />,
+  },
+  {
+    nome: "Node.js",
+    nivelProficiencia: 3,
+    icon: () => <SiNodedotjs />,
+  },
+  {
+    nome: "Java",
+    nivelProficiencia: 2,
+    icon: () => <SiJava />,
+  },
+  {
+    nome: "Python",
+    nivelProficiencia: 3,
+    icon: () => <SiPython />,
+  },
+  {
+    nome: "Git",
+    nivelProficiencia: 3,
+    icon: () => <SiGithub />,
+  },
+  {
+    nome: "Styled-Components",
+    nivelProficiencia: 3,
+    icon: () => <SiStyledcomponents />,
+  },
+  {
+    nome: "mySQL",
+    nivelProficiencia: 2,
+    icon: () => <SiMysql />,
+  },
+  {
+    nome: "MongoDB",
+    nivelProficiencia: 1,
+    icon: () => <SiMongodb />,
+  },
+  
 ];
 
 const ProfileDataHabilidadesDev = () => {

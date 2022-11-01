@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     //border: 1px solid green;
-    margin: 1rem;
+    //margin: 1rem;
     display: flex;
     flex-direction: column;
     color: var(--text-title);

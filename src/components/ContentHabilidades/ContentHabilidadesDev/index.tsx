@@ -2,28 +2,9 @@ import React from "react";
 
 import {
   CardSkills,
-  Container,
-  GitIcon,
-  JavaIcon,
-  MongoDbIcon,
-  MySqlIcon,
-  NodeIcon,
-  PythonIcon,
-  ReactIcon,
-  StyeldComponentsIcon,
-  TypescriptIcon,
-  VueIcon,
-} from "./styles";
+  Container,} from "./styles";
 
-interface IContentHabilidadesDev {
-  typescript?: string;
-  front1: string;
-  front2?: string;
-  linguagemBackend1: string;
-  linguagemBackend2?: string;
-  linguagemBackend3?: string;
-  servicos: string[];
-}
+
 
 export interface IHabilidade {
   nome: string;
@@ -42,6 +23,8 @@ const ContentHabilidadesDev = (props: any) => {
             <CardSkills key={item.nome}>
               <h3>{item.nome}</h3>
               <item.icon />
+              <span>Proficiencia</span>
+              <span>{item.nivelProficiencia}</span>
             </CardSkills>
           ))}
         </div>

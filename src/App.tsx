@@ -1,16 +1,15 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import BaseLayout from "./components/BaseLayout/BaseLayout";
-import Carousel from "./components/Carousel";
-
 import Navbar from "./components/Navbar";
 import ProfileDataBio from "./components/ProfileDataBio";
 import ProfileDataHabilidadesDev from "./components/ProfileDataHabilidades/ProfileHabilidadesDev";
+import ProjetosDev from "./components/Projetos/ProjetosDev";
 import { MainContext } from "./context/MainContext";
 import IGlobais from "./globais";
 import { GlobalStyle } from "./styles/global";
+
+
 function App() {
-  const slides = [0, 1, 2, 3];
 
   const [global, setGlobal] = useState<IGlobais>({
     lula: "dev",
@@ -36,7 +35,7 @@ function App() {
         <button onClick={set3d}>mudar</button>
         <ProfileDataBio />
         <ProfileDataHabilidadesDev />
-        <Carousel slides={slides} />
+        <ProjetosDev />
       </BaseLayout>
       <GlobalStyle />
     </MainContext.Provider>
