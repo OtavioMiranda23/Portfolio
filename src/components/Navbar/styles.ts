@@ -18,7 +18,7 @@ export const MenuBurguer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    //padding: 0.5rem;
     text-align: center;
 
     background-color: var(--red);

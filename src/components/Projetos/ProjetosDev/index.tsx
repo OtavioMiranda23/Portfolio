@@ -1,34 +1,74 @@
-import React, { useEffect, useState } from 'react';
+import { CardPortfolio, Container } from './styles';
+import { useFetch } from '../../Hook/useFetch';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
-import { Container } from './styles';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-type Repository = {
-    full_name: string;
-    url: string
-}
+// Import Swiper styles
+import './slider.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { CardSkills } from '../../ContentHabilidades/ContentHabilidadesDev/styles';
+
 
 const ProjetosDev = () => {
-    const url = 'https://api.github.com/users/otaviomiranda23/repos';
-    const [repos, setRepos] = useState<Repository[]>([]);
-    useEffect(() => {
-        fetch(url).then(res => res.json()).then(data => setRepos(data))
-    } , []);
-    
+    // const { data: repositories, isFetching } = 
+    // useFetch<Repository[]>("/users/OtavioMiranda23/repos");
   return (
-    <Container>
-    <ul>
-        {repos.map(repository => {
-            return (
-            <li style={{color: '#fff'}}>
-                <strong> {repository.full_name} </strong>
-                <p> {repository.url} </p>
-            </li>
+    // <div>
+    //     {isFetching && <p>Carregando...</p>}
+    //     {repositories?.map(repository => {
+    //         return (
+    //             <a href={repository.url}>{repository.full_name}</a>
+    //         )
+    //     })}
+    // </div>
 
+        <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={5}
+        slidesPerView={2}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+        >
 
-            )
-        })}
-    </ul>
-    </Container>
+      <SwiperSlide>
+            <CardPortfolio>
+        Slide 1
+            </CardPortfolio>
+        </SwiperSlide>
+      <SwiperSlide>
+            <CardPortfolio>
+        Slide 2
+            </CardPortfolio>
+        </SwiperSlide>
+      <SwiperSlide>
+            <CardPortfolio>
+        Slide 3
+            </CardPortfolio>
+        </SwiperSlide>
+      <SwiperSlide>
+            <CardPortfolio>
+        Slide 4
+            </CardPortfolio>
+        </SwiperSlide>
+      <SwiperSlide>
+            <CardPortfolio>
+        Slide 5
+            </CardPortfolio>
+        </SwiperSlide>
+      <SwiperSlide>
+            <CardPortfolio>
+        Slide 6
+            </CardPortfolio>
+        </SwiperSlide>
+      ...
+    </Swiper>
   );
 }
 

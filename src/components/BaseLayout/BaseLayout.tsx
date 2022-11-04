@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.main`
   height: calc(100vh - 125px);
   padding: 5%;
-
+  width: auto;
 
 
   // Celular
