@@ -3,31 +3,27 @@ import LerMais from "../LerMais";
 import { useMainContext } from "../../context/MainContext";
 import { ButtonsBio, Container } from "./styles";
 
-interface IContentBio {
-  map: any;
-  saudacao: string;
-  nomeDev: string;
-  especialidade: string;
-  resumo: string;
-  children?: string;
-}
+// export interface IDataBio {
+//   resumo: string;
+// }
 
-const ContentBio: React.FC<IContentBio> = (Props) => {
+const ContentBio = (props: any) => {
   let limiteCaracteresBio = 110;
-
-  const { especialidade } = useMainContext();
+  let resumo =
+  "Atuo com desenvolvimento web, utilizando ReactJs, NodeJs, Java e Python. Possuo experiência com análise de dados, no Arquivo Público de São Paulo, com desenvolvimento de aplicações web e computação gráfica, incluindo animação, ilustração e modelagem 3D. Minha formação inicial, em História, pela Universidade de São Paulo, e a atual, em Ciências da Computação, contribuem para minha autonomia de pesquisa e gosto pelo aprendizado.";
+  const { especialidade, descricao  } = useMainContext();
 
   return (
     <Container>
       <h1>
-        {Props.saudacao}! Meu nome é {Props.nomeDev}, sou {especialidade}
+        Olá! Meu nome é Otávio, sou {especialidade}
       </h1>
       <LerMais limiteCaracteresBio={limiteCaracteresBio}>
-        {Props.resumo}
+        {descricao}
       </LerMais>
       <ButtonsBio>
-        <button>Linkedin</button>
-        <button>CV</button>
+        <button className="Linkedin">Linkedin</button>
+        <button className="CV">CV</button>
       </ButtonsBio>
     </Container>
   );

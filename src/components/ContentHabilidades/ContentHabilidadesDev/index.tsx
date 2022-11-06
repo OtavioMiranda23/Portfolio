@@ -1,8 +1,9 @@
 import React from "react";
-
-import {
+import { AiOutlineStar } from "react-icons/ai"
+import { 
   CardSkills,
-  Container,} from "./styles";
+  Container,
+  ProficienciaEstrela,} from "./styles";
 
 
 
@@ -12,7 +13,30 @@ export interface IHabilidade {
   icon: () => any;
 }
 
+
 const ContentHabilidadesDev = (props: any) => {
+  
+  function convertToStar(proficiencia: number) {
+    switch (proficiencia) {
+      case 1:
+        return <ProficienciaEstrela>
+        <AiOutlineStar/>
+        </ProficienciaEstrela>
+      case 2:
+        return <ProficienciaEstrela>
+        <AiOutlineStar/>
+        <AiOutlineStar/>
+        </ProficienciaEstrela>
+      case 3:
+        return <ProficienciaEstrela>
+        <AiOutlineStar/>
+        <AiOutlineStar/>
+        <AiOutlineStar/>
+        </ProficienciaEstrela>
+        }
+      };
+  
+  
   return (
     <>
       <Container>
@@ -23,8 +47,12 @@ const ContentHabilidadesDev = (props: any) => {
             <CardSkills key={item.nome}>
               <h3>{item.nome}</h3>
               <item.icon />
-              <span>Proficiencia</span>
-              <span>{item.nivelProficiencia}</span>
+              <>
+               {
+                convertToStar(item.nivelProficiencia)
+               }
+              </>
+
             </CardSkills>
           ))}
         </div>

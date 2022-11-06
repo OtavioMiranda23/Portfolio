@@ -1,4 +1,5 @@
 export default interface IGlobais {
   especialidade: string;
-  lula: "dev" | "3d" | "desenho";
+  contexto: "dev" | "3d" | "desenho";
+  descricao: string;
 }

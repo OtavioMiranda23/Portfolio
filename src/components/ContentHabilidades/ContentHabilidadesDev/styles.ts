@@ -56,3 +56,9 @@ export const CardSkills = styled.div`
     font-weight: 700;
   }
 `;
+
+export const ProficienciaEstrela = styled.div`
+  
+  display: flex;
+  flex-direction: row;
+`;

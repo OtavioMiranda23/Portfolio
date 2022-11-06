@@ -27,10 +27,6 @@ export const MenuBurguer = styled.div`
         list-style-type: none;
     }
 
-    li:nth-child(1) {
-        font-size: 1.5rem;
-    }
-    
     li + li {
         //border: 1px solid green;
         padding-top: 0.5rem;
