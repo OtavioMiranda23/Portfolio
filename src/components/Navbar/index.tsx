@@ -1,33 +1,14 @@
-import React, { useState } from 'react';
+import React, { HtmlHTMLAttributes, useState } from 'react';
 
 import { Container, MenuBurguer, BarrasMenuHamburguer } from './styles';
 
 const Navbar = () => {
-  const [navBarExpandida, setNavBarExpandida] = useState<boolean>(false);
-  const handleChange = (e: any) => {
-    setNavBarExpandida(e.target.checked);
-    console.log(navBarExpandida)
-    };
-  const navBarFechada = 
-  <div>
-  <MenuBurguer>
-  <ul>
-    <li>BIO</li>
-    <li>HABILIDADES</li>
-    <li>PORTFÓLIO</li>
-  </ul>
-  <BarrasMenuHamburguer>
-    <input
-    type="checkbox"
-    onChange={(e)=> handleChange(e)} />
-    <div>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </BarrasMenuHamburguer>
-  </MenuBurguer>
-  </div>; 
+  const [isNavBarExpandida, setIsNavBarExpandida] = useState<boolean>();
+  // const handleChange = (e: any) => {
+  //   setIsNavBarExpandida(e.target.checked);
+  //   console.log(isNavBarExpandida)
+  //   };
+  
   
   const navBarAberta = 
   <Container>
@@ -37,38 +18,24 @@ const Navbar = () => {
     <li>HABILIDADES</li>
     <li>PORTFÓLIO</li>
   </ul>
-  <BarrasMenuHamburguer>
+  </MenuBurguer>
+</Container>
+  return (
+    <>
+    <Container>
+
+      <BarrasMenuHamburguer>
     <input
     type="checkbox"
-    onChange={(e)=> handleChange(e)} />
+    onChange={(event:React.ChangeEvent<HTMLInputElement>)=> setIsNavBarExpandida(event.currentTarget.checked)} />
     <div>
       <span></span>
       <span></span>
       <span></span>
     </div>
   </BarrasMenuHamburguer>
-  </MenuBurguer>
-</Container>
-  return (
-    <Container>
-    <MenuBurguer>
-    <ul>
-      <li>BIO</li>
-      <li>HABILIDADES</li>
-      <li>PORTFÓLIO</li>
-    </ul>
-    <BarrasMenuHamburguer>
-      <input
-      type="checkbox"
-      onChange={(e)=> handleChange(e)} />
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </BarrasMenuHamburguer>
-    </MenuBurguer>
-  </Container>
+    </Container>
+    </>
     );
 }
 

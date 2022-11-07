@@ -23,9 +23,12 @@ export const CardPortfolio = styled.div`
     color: var(--shape);
     border-radius: .25rem;
     
-    :active {
+    :hover {
+        transition: .1s;
         background-color: var(--red);
+        cursor: pointer;
 
     }
+
 `;
 

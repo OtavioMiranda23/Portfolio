@@ -27,11 +27,6 @@ const habilidades: IHabilidade[] = [
     icon: () => <SiNodedotjs />,
   },
   {
-    nome: "Node.js",
-    nivelProficiencia: 3,
-    icon: () => <SiNodedotjs />,
-  },
-  {
     nome: "Java",
     nivelProficiencia: 2,
     icon: () => <SiJava />,

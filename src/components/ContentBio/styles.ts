@@ -31,14 +31,40 @@ export const ButtonsBio = styled.div`
         position: relative;
         cursor: pointer;
     }
-    .Linkedin {
-        :hover {
-            background-color: var(--background);
-            border: .2rem solid var(--red);
-            color: var(--red);
-        }
+
+    //-------Botão Linkedin-------
+    .Linkedin:hover {
+        color: var(--red);
+        font-weight: 600;
+        cursor: pointer;
+        border: .2rem solid var(--red);
+        border-left:none;
+        border-right:none;
+        border-radius: 0;
+    }    
+    .Linkedin:before {
+        transition: 0.1s ease ease-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: var(--background);
+        border-left: none;
+    }    
+    .Linkedin:hover:before {
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0%;
+        opacity: 1;
+        z-index: -1;
+        border-left: none;
+
     }
 
+    //----Botão CV-----
     .CV:hover {
         color: var(--red);
         font-weight: 600;

@@ -2,11 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.nav`
     background: var(--red);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
     font-weight: 500;
-    display: flex;
-    height: 125px;
-    color: var(--text-title);
+    //height: 125px;
+    height: 62px;
 `;
 
 export const MenuBurguer = styled.div`
@@ -34,7 +32,7 @@ export const MenuBurguer = styled.div`
 `;
 
 export const BarrasMenuHamburguer = styled.label`
-    border: 1px solid green;
+    //border: 1px solid green;
     input {
         -webkit-appearance: none;
         visibility: hidden;
