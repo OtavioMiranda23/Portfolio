@@ -1,42 +1,8 @@
-import React from "react";
-import { AiOutlineStar } from "react-icons/ai"
-import { 
-  CardSkills,
-  Container,
-  ProficienciaEstrela,} from "./styles";
+import { AiOutlineStar } from "react-icons/ai";
+import { CardSkills, Container, ProficienciaEstrela } from "./styles";
+import IHabilidade from "../../../types/Habilidade";
 
-
-
-export interface IHabilidade {
-  nome: string;
-  nivelProficiencia: number;
-  icon: () => any;
-}
-
-
-const ContentHabilidadesDev = (props: any) => {
-  
-  function convertToStar(proficiencia: number) {
-    switch (proficiencia) {
-      case 1:
-        return <ProficienciaEstrela>
-        <AiOutlineStar/>
-        </ProficienciaEstrela>
-      case 2:
-        return <ProficienciaEstrela>
-        <AiOutlineStar/>
-        <AiOutlineStar/>
-        </ProficienciaEstrela>
-      case 3:
-        return <ProficienciaEstrela>
-        <AiOutlineStar/>
-        <AiOutlineStar/>
-        <AiOutlineStar/>
-        </ProficienciaEstrela>
-        }
-      };
-  
-  
+const ContentHabilidadesDev = (props: { skills: IHabilidade[] }) => {
   return (
     <>
       <Container>
@@ -47,12 +13,11 @@ const ContentHabilidadesDev = (props: any) => {
             <CardSkills key={item.nome}>
               <h3>{item.nome}</h3>
               <item.icon />
-              <>
-               {
-                convertToStar(item.nivelProficiencia)
-               }
-              </>
-
+              <ProficienciaEstrela>
+                {new Array(item.nivelProficiencia).fill(0).map(() => (
+                  <AiOutlineStar />
+                ))}
+              </ProficienciaEstrela>
             </CardSkills>
           ))}
         </div>
