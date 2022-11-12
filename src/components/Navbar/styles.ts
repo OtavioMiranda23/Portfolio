@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.nav`
-    background: var(--red);
+    background: ${props => props.theme.colors.primary};
     font-weight: 500;
     //height: 125px;
     height: 62px;
@@ -19,7 +19,7 @@ export const MenuBurguer = styled.div`
     //padding: 0.5rem;
     text-align: center;
 
-    background-color: var(--red);
+    background-color: ${props => props.theme.colors.primary};
 
     ul {
         list-style-type: none;

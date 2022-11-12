@@ -10,6 +10,8 @@ import ProfileDev from "./context/ProfileDev";
 import { GlobalStyle } from "./styles/global";
 import Theme from "./styles/theme";
 import Especializacao from "./types/Especializacao";
+import { ThemeProvider } from "styled-components";
+import dev from "./styles/themes/dev"
 
 function App() {
   const [global, setGlobal] = useState<Especializacao>(ProfileDev);
@@ -18,7 +20,7 @@ function App() {
 
   return (
     <MainContext.Provider value={global}>
-      <Theme>
+      <ThemeProvider theme={dev} >
         <Navbar />
         <BaseLayout>
           <p style={{ color: "#fff" }}>{global.contexto}</p>
@@ -28,7 +30,7 @@ function App() {
           <ProjetosDev />
         </BaseLayout>
         <GlobalStyle />
-      </Theme>
+      </ThemeProvider>
     </MainContext.Provider>
   );
 }
