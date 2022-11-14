@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LerMais from "../LerMais";
-import { useMainContext } from "../../context/MainContext.tsx";
-import { ButtonsBio, Container } from "./styles";
+import { useMainContext } from "../../context/MainContext.js";
+import { Apresentacao, ButtonsBio, Container } from "./styles";
 
 // export interface IDataBio {
 //   resumo: string;
@@ -13,7 +13,11 @@ const ContentBio = (props: any) => {
 
   return (
     <Container>
-      <h1>Olá! Meu nome é Otávio, sou {especialidade}</h1>
+      <Apresentacao>
+        <span>Otávio,</span>
+        <span>sou</span>
+        <span>{especialidade}</span>
+      </Apresentacao>
       <LerMais limiteCaracteresBio={limiteCaracteresBio}>{descricao}</LerMais>
       <ButtonsBio>
         <button className="Linkedin">Linkedin</button>

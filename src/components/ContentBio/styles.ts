@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   //border: 1px solid green;
@@ -13,6 +13,52 @@ export const Container = styled.div`
     text-align: start;
     margin: 0.2rem 0 1rem 0;
   }
+`;
+const colorCycle = keyframes`
+0%, 55% {
+  filter: brightness(0) invert(1); //white
+}
+  11%, 33% {
+    filter: none;
+  }
+`;
+
+
+export const Apresentacao = styled.h1`
+  font-family: 'Josefin Sans';
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  font-size: 4rem;
+  line-height: 3.3rem;
+  letter-spacing: -.4rem;
+
+  color: #fff;
+
+  span {
+    padding: 0 1rem;
+    filter: brightness(1) invert(0);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: ${colorCycle} 10s ease-in-out infinite;
+  }
+  span:nth-child(1) {
+            background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+        }
+        span:nth-child(2) {
+            background-image: linear-gradient(90deg, #7928ca, #ff0080);
+            animation-delay: 3.33s;
+        }
+        span:nth-child(3) {
+            background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+            animation-delay: 6.66s;
+        }
 `;
 
 export const ButtonsBio = styled.div`
