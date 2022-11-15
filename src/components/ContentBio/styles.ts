@@ -5,7 +5,7 @@ export const Container = styled.div`
   //margin: 1rem;
   display: flex;
   flex-direction: column;
-  color: var(--text-title);
+  color: ${props => props.theme.colors.text};
 
   div {
     //border: 1px solid green;
@@ -51,14 +51,14 @@ export const Apresentacao = styled.h1`
     animation: ${colorCycle} 10s ease-in-out infinite;
   }
   span:nth-child(1) {
-            background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+            background-image: linear-gradient(90deg, #7A056A, #D00000);
         }
         span:nth-child(2) {
-            background-image: linear-gradient(90deg, #7928ca, #ff0080);
+            background-image: linear-gradient(90deg, #DC2F02, #F48C06);
             animation-delay: 3.33s;
         }
         span:nth-child(3) {
-            background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+            background-image: linear-gradient(90deg, #FAA307, #F7FF08);
             animation-delay: 6.66s;
         }
 `;
@@ -71,9 +71,10 @@ export const ButtonsBio = styled.div`
     padding: 1rem 0.5rem 1rem 0.5rem;
     border-radius: 0.25rem;
     margin: 0 6rem 1rem 6rem;
-    border: 0.2rem solid var(--shape);
-    background-color: var(--red);
-    color: var(--shape);
+    border: 0.2rem solid ${props => props.theme.colors.secundary};
+    background-color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.text };
+    font-weight: 600;
     z-index: 1;
     outline: none;
     position: relative;
@@ -82,10 +83,10 @@ export const ButtonsBio = styled.div`
 
   //-------Botão Linkedin-------
   .Linkedin:hover {
-    color: var(--red);
+    color: ${props => props.theme.colors.secundary};
     font-weight: 600;
     cursor: pointer;
-    border: 0.2rem solid var(--red);
+    border: 0.2rem solid ${props => props.theme.colors.secundary};
     border-left: none;
     border-right: none;
     border-radius: 0;
@@ -99,7 +100,7 @@ export const ButtonsBio = styled.div`
     bottom: 0;
     opacity: 0;
     content: "";
-    background-color: var(--background);
+    background-color: ${props => props.theme.colors.background};
     border-left: none;
   }
   .Linkedin:hover:before {
@@ -113,10 +114,10 @@ export const ButtonsBio = styled.div`
 
   //----Botão CV-----
   .CV:hover {
-    color: var(--red);
+    color: ${props => props.theme.colors.secundary};
     font-weight: 600;
     cursor: pointer;
-    border: 0.2rem solid var(--red);
+    border: 0.2rem solid ${props => props.theme.colors.secundary};
   }
 
   .CV:before {
@@ -128,7 +129,7 @@ export const ButtonsBio = styled.div`
     bottom: 0;
     opacity: 0;
     content: "";
-    background-color: var(--background);
+    background-color: ${props => props.theme.colors.background};
   }
 
   .CV:hover:before {

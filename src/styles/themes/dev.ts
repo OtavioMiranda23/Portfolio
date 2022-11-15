@@ -1,10 +1,11 @@
 export default {
   title: 'dev',
   colors: {
-    primary: '#FF4C2C',
-    secundary: '#D63AF9',
+    primary: '#D00000',
+    secundary: '#FAA307',
+    tertiary: '#6A040F',
 
-    background: '#162426',
+    background: '#370617',
     text: '#FFFFFF',
   }
 }

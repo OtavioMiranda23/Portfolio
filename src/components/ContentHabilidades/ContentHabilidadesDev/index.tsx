@@ -6,7 +6,6 @@ const ContentHabilidadesDev = (props: { skills: IHabilidade[] }) => {
   return (
     <>
       <Container>
-        <span>Services</span>
         <h1>Skill-Set</h1>
         <div className="wrapper">
           {props.skills.map((item: IHabilidade) => (

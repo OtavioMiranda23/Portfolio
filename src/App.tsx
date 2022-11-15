@@ -8,10 +8,10 @@ import { MainContext } from "./context/MainContext";
 import Profile3D from "./context/Profile3D";
 import ProfileDev from "./context/ProfileDev";
 import { GlobalStyle } from "./styles/global";
-import Theme from "./styles/theme";
 import Especializacao from "./types/Especializacao";
 import { ThemeProvider } from "styled-components";
 import dev from "./styles/themes/dev"
+import { ThemeButton } from "./components/Navbar/styles";
 
 function App() {
   const [global, setGlobal] = useState<Especializacao>(ProfileDev);
@@ -23,8 +23,10 @@ function App() {
       <ThemeProvider theme={dev} >
         <Navbar />
         <BaseLayout>
+        <ThemeButton>
           <p style={{ color: "#fff" }}>{global.contexto}</p>
           <button onClick={set3d}>mudar</button>
+        </ThemeButton>
           <ContentBio />
           <ProfileDataHabilidadesDev />
           <ProjetosDev />

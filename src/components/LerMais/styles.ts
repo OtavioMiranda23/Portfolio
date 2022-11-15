@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  color: var(--text-body);
+  color: ${props => props.theme.colors.text};
   font-size: 1.1rem;
   font-weight: 600;
   //border: 1px solid magenta;
@@ -13,7 +13,7 @@ export const Container = styled.div`
     font-weight: 700;
     cursor: pointer;
     border: none;
-    color: var(--shape);
+    color: ${props => props.theme.colors.text};
 
   }
 `;

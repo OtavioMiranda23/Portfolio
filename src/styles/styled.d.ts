@@ -7,6 +7,7 @@
       colors: {
         primary: string,
         secundary: string,
+        tertiary: string,
         
         background: string,
         text: string,

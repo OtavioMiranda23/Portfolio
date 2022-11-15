@@ -8,15 +8,15 @@ export const Container = styled.div`
   margin: 0 auto;
 
   span {
-    color: var(--shape);
+    color: ${props => props.theme.colors.text};
     font-size: 1.2rem;
     font-weight: 500;
   }
 
   h1 {
     font-size: 2.5rem;
-    color: var(--red);
-    border-bottom: 3px solid #ff4c2c;
+    color: ${props => props.theme.colors.secundary};
+    border-bottom: 3px solid ${props => props.theme.colors.secundary};
     margin: 1rem;
     padding-bottom: 0.5rem;
   }
@@ -36,14 +36,14 @@ export const CardSkills = styled.div`
   //border: 2px solid green;
   display: flex;
   flex-direction: column;
-  color: var(--shape);
+  color: ${props => props.theme.colors.text};
   gap: 0.5rem;
 
   justify-content: center;
   align-items: center;
   //margin: 0.5rem auto;
 
-  background-color: #233436;
+  background-color: ${props => props.theme.colors.tertiary};
   border-radius: 0.25rem;
   padding: 1rem;
   //width: 11rem;
@@ -51,7 +51,7 @@ export const CardSkills = styled.div`
   svg {
     width: 2rem;
     height: 2rem;
-    fill: var(--red);
+    fill: ${props => props.theme.colors.secundary};
     margin-bottom: 0.5rem;
     font-weight: 700;
   }

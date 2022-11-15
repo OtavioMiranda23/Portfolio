@@ -15,8 +15,13 @@ import IHabilidade from "../types/Habilidade";
 
 const habilidades: IHabilidade[] = [
   {
+    nome: "Javascript",
+    nivelProficiencia: 3,
+    icon: () => <SiTypescript />,
+  },
+  {
     nome: "Typescript",
-    nivelProficiencia: 4,
+    nivelProficiencia: 3,
     icon: () => <SiTypescript />,
   },
   {

@@ -98,3 +98,9 @@ export const NavbarExpandida = styled.nav`
     background: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.text};
 `;
+
+export const ThemeButton = styled.div`
+    position: absolute;
+    top: 1rem;
+
+`;

@@ -3,10 +3,6 @@ import LerMais from "../LerMais";
 import { useMainContext } from "../../context/MainContext.js";
 import { Apresentacao, ButtonsBio, Container } from "./styles";
 
-// export interface IDataBio {
-//   resumo: string;
-// }
-
 const ContentBio = (props: any) => {
   let limiteCaracteresBio = 110;
   const { especialidade, descricao } = useMainContext();
