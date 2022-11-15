@@ -14,8 +14,8 @@ const ContentBio = (props: any) => {
   return (
     <Container>
       <Apresentacao>
+        <span>Sou</span>
         <span>Otávio,</span>
-        <span>sou</span>
         <span>{especialidade}</span>
       </Apresentacao>
       <LerMais limiteCaracteresBio={limiteCaracteresBio}>{descricao}</LerMais>

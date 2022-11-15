@@ -25,19 +25,21 @@ const colorCycle = keyframes`
 
 
 export const Apresentacao = styled.h1`
-  font-family: 'Josefin Sans';
+  font-family: 'Anton', Arial, Helvetica, sans-serif;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  font-size: 4rem;
-  line-height: 3.3rem;
-  letter-spacing: -.4rem;
-
+  margin: 1rem;
+  padding-top: 1rem;
+  font-size: 3.5rem;
+  letter-spacing: -.19rem;
+  
   color: #fff;
-
+  
+  line-height: 3.3rem;
+  margin: 2px solid green;
   span {
     padding: 0 1rem;
     filter: brightness(1) invert(0);

@@ -5,6 +5,7 @@ export const Container = styled.nav`
     font-weight: 500;
     //height: 125px;
     height: 62px;
+
 `;
 
 export const MenuBurguer = styled.div`
@@ -90,4 +91,10 @@ export const BarrasMenuHamburguer = styled.label`
         transform: translateX(1rem);
         opacity: 0;
     }
+`;
+
+export const NavbarExpandida = styled.nav`
+    height: 50px;
+    background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.text};
 `;
