@@ -1,6 +1,7 @@
 import {
   SiGithub,
   SiJava,
+  SiJavascript,
   SiMongodb,
   SiMysql,
   SiNodedotjs,
@@ -17,7 +18,7 @@ const habilidades: IHabilidade[] = [
   {
     nome: "Javascript",
     nivelProficiencia: 3,
-    icon: () => <SiTypescript />,
+    icon: () => <SiJavascript />,
   },
   {
     nome: "Typescript",

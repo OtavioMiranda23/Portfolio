@@ -11,6 +11,7 @@
         
         background: string,
         text: string,
+        textBody: string
       }
     }
   }

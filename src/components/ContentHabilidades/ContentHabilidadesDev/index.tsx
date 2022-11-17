@@ -1,4 +1,4 @@
-import { AiOutlineStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import { CardSkills, Container, ProficienciaEstrela } from "./styles";
 import IHabilidade from "../../../types/Habilidade";
 
@@ -14,7 +14,7 @@ const ContentHabilidadesDev = (props: { skills: IHabilidade[] }) => {
               <item.icon />
               <ProficienciaEstrela>
                 {new Array(item.nivelProficiencia).fill(0).map(() => (
-                  <AiOutlineStar />
+                  <AiFillStar />
                 ))}
               </ProficienciaEstrela>
             </CardSkills>

@@ -1,8 +1,6 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  width: 90vw;
-
   //border: 1px solid green;
   text-align: center;
   margin: 0 auto;
@@ -30,6 +28,21 @@ export const Container = styled.div`
     gap: 0.5rem;
     //margin: 0.4rem auto;
   }
+  @media screen and (min-width: 768px) {
+    .wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media screen and (min-width: 889px) {
+    .wrapper {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .wrapper {
+      grid-template-columns: repeat(6, 1fr);
+    }
+}
 `;
 
 export const CardSkills = styled.div`

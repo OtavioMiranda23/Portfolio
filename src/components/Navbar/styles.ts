@@ -101,6 +101,6 @@ export const NavbarExpandida = styled.nav`
 
 export const ThemeButton = styled.div`
     position: absolute;
-    top: 1rem;
+    top: 1.5rem;
 
 `;

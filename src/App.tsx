@@ -9,23 +9,51 @@ import Profile3D from "./context/Profile3D";
 import ProfileDev from "./context/ProfileDev";
 import { GlobalStyle } from "./styles/global";
 import Especializacao from "./types/Especializacao";
-import { ThemeProvider } from "styled-components";
-import dev from "./styles/themes/dev"
+import { ThemeContext, ThemeProvider } from "styled-components";
 import { ThemeButton } from "./components/Navbar/styles";
+
+import Switch from "react-switch";
+
+import { lighten, shade } from "polished"
+
+import devTheme from "./styles/themes/dev";
+import artTheme from "./styles/themes/art";
 
 function App() {
   const [global, setGlobal] = useState<Especializacao>(ProfileDev);
-  const set3d = () =>
+  const [isChecked, setChecked] = useState(false);
+  const [theme, setTheme] = useState(devTheme);
+
+  const toggleTheme = () => {
+    setTheme(theme.title === 'devTheme' ? artTheme : devTheme);
     setGlobal(global.contexto === "dev" ? Profile3D : ProfileDev);
+    setChecked(isChecked ? false : true)
+  };
+
 
   return (
     <MainContext.Provider value={global}>
-      <ThemeProvider theme={dev} >
+      <ThemeProvider theme={theme} >
         <Navbar />
         <BaseLayout>
         <ThemeButton>
-          <p style={{ color: "#fff" }}>{global.contexto}</p>
-          <button onClick={set3d}>mudar</button>
+          <Switch 
+          onChange={toggleTheme}
+          checked={isChecked}
+          uncheckedIcon={false}
+          checkedIcon={false}
+          height={10}
+          width={40}
+          borderRadius={5}
+          handleDiameter={15}
+          offColor={lighten(0.1, '#074f93')}
+          onColor={lighten(0.1, '#D00000')}
+
+          />
+          {/* <p style={{ color: "#fff" }}>{global.contexto}</p>
+          <button onClick={set3d}
+          onChange={toggleTheme} 
+          >mudar</button> */}
         </ThemeButton>
           <ContentBio />
           <ProfileDataHabilidadesDev />

@@ -18,7 +18,7 @@ export default styled.main`
 
   // Tela 720p
   @media screen and (min-width: 889px) {
-
+    
   }
 
   // Telas maiores

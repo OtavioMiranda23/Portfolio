@@ -6,7 +6,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   color: ${props => props.theme.colors.text};
-
+  
+  @media screen and (min-width: 889px) {
+    height: 85vh;
+}
   div {
     //border: 1px solid green;
     //margin-top: .5rem;
@@ -14,6 +17,8 @@ export const Container = styled.div`
     margin: 0.2rem 0 1rem 0;
   }
 `;
+
+
 const colorCycle = keyframes`
 0%, 55% {
   filter: brightness(0) invert(1); //white
@@ -34,12 +39,18 @@ export const Apresentacao = styled.h1`
   margin: 1rem;
   padding-top: 1rem;
   font-size: 3.5rem;
-  letter-spacing: -.19rem;
+  letter-spacing: -.1rem;
   
   color: #fff;
   
-  line-height: 3.3rem;
+  line-height: 3.5rem;
   margin: 2px solid green;
+
+  @media screen and (min-width: 889px) {
+    padding: 2rem;
+    font-size: 7rem;
+    line-height: 7rem;
+}
   span {
     padding: 0 1rem;
     filter: brightness(1) invert(0);
@@ -63,14 +74,23 @@ export const Apresentacao = styled.h1`
         }
 `;
 
+
+// ------- Buttons --------
 export const ButtonsBio = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  //border: 1px solid green;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
   button {
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    height: 3.5rem;
+    width: 13rem;
     border-radius: 0.25rem;
-    margin: 0 6rem 1rem 6rem;
+    margin: .5rem;
     border: 0.2rem solid ${props => props.theme.colors.secundary};
     background-color: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.text };

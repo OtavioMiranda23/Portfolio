@@ -4,7 +4,7 @@ import { useMainContext } from "../../context/MainContext.js";
 import { Apresentacao, ButtonsBio, Container } from "./styles";
 
 const ContentBio = (props: any) => {
-  let limiteCaracteresBio = 110;
+  let limiteCaracteresBio = 150;
   const { especialidade, descricao } = useMainContext();
 
   return (
