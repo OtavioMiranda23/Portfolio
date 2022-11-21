@@ -19,8 +19,12 @@ const navBarAberta =
     <>
         { isNavBarExpandida && navBarAberta }
     <Container>
-
-      <BarrasMenuHamburguer>
+      <ul>
+        <li>Bio</li>
+        <li>Habilidade</li>
+        <li>Portfólio</li>
+      </ul>
+      <BarrasMenuHamburguer className='menuMobile'>
         <input
         type="checkbox"
         onChange={(event:React.ChangeEvent<HTMLInputElement>)=> setIsNavBarExpandida(event.currentTarget.checked)} />

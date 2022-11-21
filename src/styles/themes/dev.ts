@@ -1,12 +1,12 @@
 export default {
   title: 'devTheme',
   colors: {
-    primary: '#9D0208',
-    secundary: '#FAA307',
-    tertiary: '#6A040F',
+    primary: '#EEC643',
+    secundary: '#71C178',
+    tertiary: '#313131',
 
-    background: '#370617',
-    text: '#FFFFFF',
+    background: '#232323',
+    text: '#EEF0F2',
     textBody: '#D1C7C5'
   }
 }

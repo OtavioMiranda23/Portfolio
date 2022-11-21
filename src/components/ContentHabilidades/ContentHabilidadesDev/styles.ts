@@ -13,8 +13,8 @@ export const Container = styled.div`
 
   h1 {
     font-size: 2.5rem;
-    color: ${props => props.theme.colors.secundary};
-    border-bottom: 3px solid ${props => props.theme.colors.secundary};
+    color: ${props => props.theme.colors.primary};
+    border-bottom: 3px solid ${props => props.theme.colors.primary};
     margin: 1rem;
     padding-bottom: 0.5rem;
   }
@@ -64,7 +64,7 @@ export const CardSkills = styled.div`
   svg {
     width: 2rem;
     height: 2rem;
-    fill: ${props => props.theme.colors.secundary};
+    fill: ${props => props.theme.colors.primary};
     margin-bottom: 0.5rem;
     font-weight: 700;
   }

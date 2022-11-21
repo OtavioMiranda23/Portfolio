@@ -10,9 +10,8 @@ const ContentBio = (props: any) => {
   return (
     <Container>
       <Apresentacao>
-        <span>Sou</span>
-        <span>Otávio,</span>
-        <span>{especialidade}</span>
+        <h1 className="estatico">Otávio,</h1>
+        <span className="digitado">{especialidade}</span>
       </Apresentacao>
       <LerMais limiteCaracteresBio={limiteCaracteresBio}>{descricao}</LerMais>
       <ButtonsBio>
