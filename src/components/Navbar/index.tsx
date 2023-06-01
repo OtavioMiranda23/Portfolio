@@ -1,29 +1,44 @@
 import React, { HtmlHTMLAttributes, useState } from 'react';
+import { Link } from 'react-scroll';
 
 import { Container, MenuBurguer, BarrasMenuHamburguer, NavbarExpandida } from './styles';
 
-const Navbar = () => {
+interface INavbar {
+  bio: React.MutableRefObject<null>,
+  habilidades: React.MutableRefObject<null>,
+  portfolio: React.MutableRefObject<null>,
+}
+
+const Navbar = (Props: INavbar) => {
   const [isNavBarExpandida, setIsNavBarExpandida] = useState<boolean>(false);
   
-const navBarAberta = 
-  <NavbarExpandida>
-    <MenuBurguer>
-    <ul>
-      <li>BIO</li>
-      <li>HABILIDADES</li>
-      <li>PORTFÓLIO</li>
-    </ul>
-    </MenuBurguer>
-  </NavbarExpandida>
+  const scrollToSection = (elementRef: any) => {
+    window.scrollTo({top: elementRef.current.offsetTop, behavior: 'smooth'})
+  }
+
+  const navBarAberta = 
+    <NavbarExpandida>
+      <MenuBurguer>
+          <ul>
+            <li onClick={()=> scrollToSection(Props.bio)}>BIO</li>
+            <li onClick={()=> scrollToSection(Props.habilidades)}>HABILIDADES</li>
+            <li onClick={()=> scrollToSection(Props.portfolio)}>PORTFÓLIO</li>
+          </ul>
+      </MenuBurguer>
+    </NavbarExpandida>
   return (
     <>
         { isNavBarExpandida && navBarAberta }
     <Container>
-      <ul>
-        <li>Bio</li>
-        <li>Habilidade</li>
-        <li>Portfólio</li>
-      </ul>
+        <div className='menuFull'>
+          <ul>
+            <li>
+              <Link to="/" spy={true} smooth={true} offset={50} duration={500}></Link> Bio</li>
+            <li>
+            <Link to="habilidades" spy={true} smooth={true} offset={50} duration={500}></Link>Habilidade</li>
+            <li onClick={()=> scrollToSection(Props.portfolio)}>Portfólio</li>
+          </ul>
+        </div>
       <BarrasMenuHamburguer className='menuMobile'>
         <input
         type="checkbox"

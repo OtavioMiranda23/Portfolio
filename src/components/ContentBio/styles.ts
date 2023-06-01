@@ -7,14 +7,16 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   color: ${props => props.theme.colors.text};
-  
+  text-align: center;
+
   @media screen and (min-width: 889px) {
     height: 85vh;
 }
+
   div {
     //border: 1px solid green;
     //margin-top: .5rem;
-    text-align: start;
+    text-align: center;
     margin: 0.2rem 0 1rem 0;
   }
 `;
@@ -94,6 +96,7 @@ export const ButtonsBio = styled.div`
   button {
     height: 3.5rem;
     width: 13rem;
+    color: ${props => props.theme.colors.background};
     //border-radius: 0.25rem;
     margin: .5rem;
     //border: 0.2rem solid ${props => props.theme.colors.primary};
@@ -109,9 +112,9 @@ export const ButtonsBio = styled.div`
   
   .Linkedin {
     background-color: ${props => props.theme.colors.background};
-    border-top: 2px solid ${props => props.theme.colors.secundary};
-    border-bottom: 2px solid ${props => props.theme.colors.secundary};
-    color: ${props => props.theme.colors.secundary};
+    border-top: 2px solid ${props => props.theme.colors.primary};
+    border-bottom: 2px solid ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primary};
     
   }
   //-------Botão Linkedin-------
@@ -119,7 +122,7 @@ export const ButtonsBio = styled.div`
     color: ${props => props.theme.colors.background};
     font-weight: 600;
     cursor: pointer;
-    border: 0.2px solid ${props => props.theme.colors.secundary};
+    border: 0.2px solid ${props => props.theme.colors.primary};
     border-left: none;
     border-right: none;
     border-radius: 0;
@@ -133,7 +136,7 @@ export const ButtonsBio = styled.div`
     bottom: 0;
     opacity: 0;
     content: "";
-    background-color: ${props => props.theme.colors.secundary};
+    background-color: ${props => props.theme.colors.primary};
     border-left: none;
   }
   .Linkedin:hover:before {

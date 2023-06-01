@@ -2,23 +2,27 @@ import React, { ReactNode, useState } from 'react';
 import { Container } from './styles';
 
 interface ILerMais {
-    children: string;
+    children: string ;
     limiteCaracteresBio: number
 }
 
 
-const LerMais: React.FC<ILerMais> = ( {limiteCaracteresBio, children} ) => {
+function LerMais( Props: ILerMais) {
   const [ lerMaisEstaAtivo, setlerMaisEstaAtivo ] = useState(false);
   const toggleBtn = () => {
     setlerMaisEstaAtivo(prevState => !prevState)
   }
 
+
   return (
-    <Container>
-        <span>{lerMaisEstaAtivo ? children : children.substr(0,limiteCaracteresBio)}</span>
+         
+      <Container>
+        
+        <span>{lerMaisEstaAtivo ? Props.children : Props.children.substr(0,Props.limiteCaracteresBio)}</span>
         <button onClick={toggleBtn}>{ lerMaisEstaAtivo ? "Ler menos..." : "Ler mais..." }</button>
     </Container>
-  );
+      )
+  ;
 }
 
 export default LerMais;

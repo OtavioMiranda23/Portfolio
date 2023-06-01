@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import BaseLayout from "./components/BaseLayout/BaseLayout";
 import ContentBio from "./components/ContentBio";
 import Navbar from "./components/Navbar";
@@ -24,6 +24,12 @@ function App() {
   const [isChecked, setChecked] = useState(false);
   const [theme, setTheme] = useState(devTheme);
 
+  const bio = useRef(null);
+  const habilidades = useRef(null);
+  const portfolio = useRef(null);
+  
+
+
   const toggleTheme = () => {
     setTheme(theme.title === 'devTheme' ? artTheme : devTheme);
     setGlobal(global.contexto === "dev" ? Profile3D : ProfileDev);
@@ -34,7 +40,7 @@ function App() {
   return (
     <MainContext.Provider value={global}>
       <ThemeProvider theme={theme} >
-        <Navbar />
+        <Navbar bio={bio} habilidades={habilidades} portfolio={portfolio}/>
         <BaseLayout>
         <ThemeButton>
           <Switch 
@@ -56,8 +62,8 @@ function App() {
           >mudar</button> */}
         </ThemeButton>
           <ContentBio />
-          <ProfileDataHabilidadesDev />
-          <ProjetosDev />
+          <ProfileDataHabilidadesDev  ref={habilidades}/>
+          <ProjetosDev ref={portfolio}/>
         </BaseLayout>
         <GlobalStyle />
       </ThemeProvider>

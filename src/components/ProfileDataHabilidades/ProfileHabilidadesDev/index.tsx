@@ -1,9 +1,19 @@
 import { useMainContext } from "../../../context/MainContext";
 import ContentHabilidadesDev from "../../ContentHabilidades/ContentHabilidadesDev";
 
-const ProfileDataHabilidadesDev = () => {
+interface IHabilidades {
+  ref: React.MutableRefObject<null> 
+}
+
+const ProfileDataHabilidadesDev = (Props: IHabilidades) => {
   const { habilidades } = useMainContext();
-  return <ContentHabilidadesDev skills={habilidades} />;
+  return (
+    <div className='habilidades' id="habilidades">
+
+    <ContentHabilidadesDev  skills={habilidades} />;
+    </div>
+
+  ) 
 };
 
 export default ProfileDataHabilidadesDev;

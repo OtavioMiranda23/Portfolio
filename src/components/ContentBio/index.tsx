@@ -3,17 +3,21 @@ import LerMais from "../LerMais";
 import { useMainContext } from "../../context/MainContext.js";
 import { Apresentacao, ButtonsBio, Container } from "./styles";
 
+
 const ContentBio = (props: any) => {
-  let limiteCaracteresBio = 150;
+  let limiteCaracteresBio = 70;
   const { especialidade, descricao } = useMainContext();
 
+
   return (
-    <Container>
+    <Container >
       <Apresentacao>
         <h1 className="estatico">Otávio,</h1>
         <span className="digitado">{especialidade}</span>
       </Apresentacao>
-      <LerMais limiteCaracteresBio={limiteCaracteresBio}>{descricao}</LerMais>
+      <LerMais limiteCaracteresBio={limiteCaracteresBio}
+
+      >{descricao}</LerMais>
       <ButtonsBio>
         <button className="Linkedin">Linkedin</button>
         <button className="CV">CV</button>

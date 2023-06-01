@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { darken, lighten } from 'polished';
 
 export const Container = styled.div`
   margin: 4rem;
@@ -19,7 +20,7 @@ export const CardPortfolio = styled.div`
   height: 10rem;
   margin: 1rem auto;
   //gap: 1rem;
-  background-color: ${props => props.theme.colors.secundary};
+  background-color: ${props => props.theme.colors.primary};
   display: flex;
   flex-direction: row;
   // color: var(--shape);
@@ -28,7 +29,7 @@ export const CardPortfolio = styled.div`
 
   :hover {
     transition: 0.1s;
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${(props) => darken(0.1, props.theme.colors.primary)};
     color: ${props => props.theme.colors.text};
     cursor: pointer;
   }

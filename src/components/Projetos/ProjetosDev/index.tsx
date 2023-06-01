@@ -12,7 +12,11 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { CardSkills } from "../../ContentHabilidades/ContentHabilidadesDev/styles";
 
-const ProjetosDev = () => {
+interface IPortfolio {
+  ref: React.MutableRefObject<null>
+}
+
+const ProjetosDev = (Props: IPortfolio) => {
   // const { data: repositories, isFetching } =
   // useFetch<Repository[]>("/users/OtavioMiranda23/repos");
   return (

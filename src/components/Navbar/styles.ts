@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.nav`
-    background: ${props => props.theme.colors.tertiary};
+    background: ${props => props.theme.colors.background};
     font-weight: 500;
     //height: 125px;
     height: 62px;
+    .menuFull {
+        margin-left: 50%;
+        
+        height: 100%;
+
+        //border: 1px solid green;
+        
+    }
 
     ul {
             //border: 1px solid green;
-            margin: 0 4.5rem;
             display: flex;
             flex-direction: row;
             justify-content:space-around;
@@ -36,10 +43,19 @@ export const Container = styled.nav`
         }
 
     @media screen and (max-width: 600px) {
+        .menuFull {
+            display: none;
+        }
         ul {
             display: none;
         }
-}
+    }
+    @media screen and (min-width: 600px) {
+        .menuMobile {
+            display: none;
+        }
+        
+    }
     @media screen and (min-width: 1200px) {
         ul {
             margin: 0 6rem;
@@ -47,12 +63,6 @@ export const Container = styled.nav`
         .menuMobile {
             display: none;
         }
-    }
-    @media screen and (min-width: 889px) {
-        .menuMobile {
-            display: none;
-        }
-        
     }
 `;
 

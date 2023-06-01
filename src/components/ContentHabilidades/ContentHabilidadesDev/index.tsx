@@ -5,7 +5,7 @@ import IHabilidade from "../../../types/Habilidade";
 const ContentHabilidadesDev = (props: { skills: IHabilidade[] }) => {
   return (
     <>
-      <Container>
+      <Container className='habilidades' id="habilidades">
         <h1>Skill-Set</h1>
         <div className="wrapper">
           {props.skills.map((item: IHabilidade) => (
