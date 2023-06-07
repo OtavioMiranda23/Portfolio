@@ -10,7 +10,7 @@ export const Container = styled.div`
   text-align: center;
 
   @media screen and (min-width: 889px) {
-    height: 85vh;
+    height: 50vh;
 }
 
   div {

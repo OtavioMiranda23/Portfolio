@@ -1,4 +1,4 @@
-import { CardPortfolio, Container } from "./styles";
+import { CardPortfolio,  Link, Titulo } from "./styles";
 import { useFetch } from "../../Hook/useFetch";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
@@ -11,12 +11,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { CardSkills } from "../../ContentHabilidades/ContentHabilidadesDev/styles";
+import { useMainContext } from "../../../context/MainContext";
+import Projeto from "../../../types/Projeto";
 
 interface IPortfolio {
   ref: React.MutableRefObject<null>
 }
 
 const ProjetosDev = (Props: IPortfolio) => {
+  const { projetos, descricao } = useMainContext();
   // const { data: repositories, isFetching } =
   // useFetch<Repository[]>("/users/OtavioMiranda23/repos");
   return (
@@ -28,37 +31,36 @@ const ProjetosDev = (Props: IPortfolio) => {
     //         )
     //     })}
     // </div>
-
+    <>
+      <Titulo>Projetcs</Titulo>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={5}
-      slidesPerView={2}
+      slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      <SwiperSlide>
-        <CardPortfolio>Slide 1</CardPortfolio>
+      {projetos.map((item: Projeto)=> {
+        return (
+          <SwiperSlide>
+          <Link 
+          href={item.url}
+          target="_blank"
+          >
+            <CardPortfolio>
+              {item.nome}
+            </CardPortfolio>
+          </Link>
       </SwiperSlide>
-      <SwiperSlide>
-        <CardPortfolio>Slide 2</CardPortfolio>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardPortfolio>Slide 3</CardPortfolio>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardPortfolio>Slide 4</CardPortfolio>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardPortfolio>Slide 5</CardPortfolio>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardPortfolio>Slide 6</CardPortfolio>
-      </SwiperSlide>
+        )
+      })}
+      
       ...
     </Swiper>
+    </>
   );
 };
 

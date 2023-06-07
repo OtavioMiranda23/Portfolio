@@ -33,13 +33,13 @@ const Navbar = (Props: INavbar) => {
         <div className='menuFull'>
           <ul>
             <li>
-              <Link to="/" spy={true} smooth={true} offset={50} duration={500}></Link> Bio</li>
+              <Link to="/" spy={true} smooth={true} offset={50} duration={500}></Link> </li>
             <li>
-            <Link to="habilidades" spy={true} smooth={true} offset={50} duration={500}></Link>Habilidade</li>
-            <li onClick={()=> scrollToSection(Props.portfolio)}>Portfólio</li>
+            <Link to="habilidades" spy={true} smooth={true} offset={50} duration={500}></Link></li>
+            <li onClick={()=> scrollToSection(Props.portfolio)}></li>
           </ul>
         </div>
-      <BarrasMenuHamburguer className='menuMobile'>
+      {/* <BarrasMenuHamburguer className='menuMobile'>
         <input
         type="checkbox"
         onChange={(event:React.ChangeEvent<HTMLInputElement>)=> setIsNavBarExpandida(event.currentTarget.checked)} />
@@ -48,7 +48,7 @@ const Navbar = (Props: INavbar) => {
           <span></span>
           <span></span>
         </div>
-      </BarrasMenuHamburguer>
+      </BarrasMenuHamburguer> */}
     </Container>
     </>
     );

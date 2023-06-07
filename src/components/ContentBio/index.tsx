@@ -19,8 +19,13 @@ const ContentBio = (props: any) => {
 
       >{descricao}</LerMais>
       <ButtonsBio>
-        <button className="Linkedin">Linkedin</button>
-        <button className="CV">CV</button>
+        <a href="https://www.linkedin.com/in/ot%C3%A1vio-miranda-4a18aa219/" target="_blank">
+          <button className="Linkedin">Linkedin</button>
+        </a>
+   
+        <a href="https://github.com/OtavioMiranda23" target="_blank" >
+          <button className="CV">Git</button>
+        </a>
       </ButtonsBio>
     </Container>
   );

@@ -1,4 +1,5 @@
 import {
+  SiCsharp,
   SiGithub,
   SiJava,
   SiJavascript,
@@ -32,7 +33,7 @@ const habilidades: IHabilidade[] = [
   },
   {
     nome: "Vue",
-    nivelProficiencia: 1,
+    nivelProficiencia: 2,
     icon: () => <SiVuedotjs />,
   },
   {
@@ -42,8 +43,13 @@ const habilidades: IHabilidade[] = [
   },
   {
     nome: "Java",
-    nivelProficiencia: 2,
+    nivelProficiencia: 3,
     icon: () => <SiJava />,
+  },
+  {
+    nome: "C#",
+    nivelProficiencia: 3,
+    icon: () => <SiCsharp />,
   },
   {
     nome: "Python",
@@ -73,12 +79,33 @@ const habilidades: IHabilidade[] = [
 ];
 
 const descricaoDev =
-  "Atuo com desenvolvimento web, utilizando ReactJs, NodeJs, Java e Python. Possuo experiência com análise de dados, no Arquivo Público de São Paulo, com desenvolvimento de aplicações web e computação gráfica, incluindo animação, ilustração e modelagem 3D. Minha formação inicial, em História, pela Universidade de São Paulo, e a atual, em Ciências da Computação, contribuem para minha autonomia de pesquisa e gosto pelo aprendizado.";
-
+ "Desenvolvedor Fullstack com habilidades abrangentes em várias linguagens de programação, incluindo Java, TypeScript, React e Flutter. Tenho experiência sólida em aplicações 3D, com especialização em animação, modelagem e integração utilizando ferramentas como Blender e Maya. Utilizo Python, Three.js e React Three Fiber para desenvolver scripts e aplicações web nesse campo. Além disso, possuo conhecimentos em ilustração, complementando minhas habilidades criativas. Estou constantemente buscando desafios que me permitam expandir meu conhecimento e contribuir para projetos inovadores."
+const projetos = [
+  {
+    url: "https://github.com/OtavioMiranda23/Lista_Tarefas", 
+    nome: "Lista de Tarafes Flutter"
+ },
+ {
+  url: "https://github.com/OtavioMiranda23/OndeVaiPassar", 
+  nome: "Onde Vai Passar"
+},
+ {
+  url: "https://github.com/OtavioMiranda23/Avaliador-de-Series-Backend", 
+  nome: "Avaliador-de-Series-Backend"
+},
+ {
+  url: "https://github.com/OtavioMiranda23/Floor-picker-Three.Js", 
+  nome: "Floor Picker"
+},
+ {
+  url: "https://github.com/OtavioMiranda23/BuscaCEP", 
+  nome: "Buscador de CEP"
+},
+]
 export default {
   contexto: "dev",
   especialidade: "Desenvolvedor Fullstack",
   descricao: descricaoDev,
   habilidades: habilidades,
-  projetos: [],
+  projetos: projetos,
 } as Especializacao;

@@ -1,17 +1,27 @@
 import styled from "styled-components";
 import { darken, lighten } from 'polished';
 
-export const Container = styled.div`
-  margin: 4rem;
-  gap: 1rem;
-  //border: 1px solid green;
-  height: 15rem;
-  display: flex;
-  flex-direction: row;
-  //border: 3px solid green;
+export const Titulo = styled.h1`
+
+    font-size: 2.5rem;
+    color: ${props => props.theme.colors.primary};
+    border-bottom: 3px solid ${props => props.theme.colors.primary};
+    margin: 1rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  `
+
+
+export const Link = styled.a`
+  
+    color: ${(props) => props.theme.colors.background};
+    text-decoration: none;
+ 
 `;
 
+
 export const CardPortfolio = styled.div`
+
   //border: 3px solid green;
   font-size: 1.2rem;
   font-weight: 500;

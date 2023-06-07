@@ -14,7 +14,7 @@ import { ThemeButton } from "./components/Navbar/styles";
 
 import Switch from "react-switch";
 
-import { lighten, shade } from "polished"
+import { lighten, padding, shade } from "polished"
 
 import devTheme from "./styles/themes/dev";
 import artTheme from "./styles/themes/art";
@@ -43,6 +43,7 @@ function App() {
         <Navbar bio={bio} habilidades={habilidades} portfolio={portfolio}/>
         <BaseLayout>
         <ThemeButton>
+
           <Switch 
           onChange={toggleTheme}
           checked={isChecked}
@@ -56,6 +57,7 @@ function App() {
           onColor={lighten(0.1, '#D00000')}
 
           />
+                    <h4> Click</h4>
           {/* <p style={{ color: "#fff" }}>{global.contexto}</p>
           <button onClick={set3d}
           onChange={toggleTheme} 
