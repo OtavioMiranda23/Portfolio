@@ -32,7 +32,7 @@ const ProjetosDev = (Props: IPortfolio) => {
     //     })}
     // </div>
     <>
-      <Titulo>Projetcs</Titulo>
+      <Titulo>Projects</Titulo>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={5}
